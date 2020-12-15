@@ -17,12 +17,39 @@ public class AnonimizacaoLGPDTest {
 		anonimizacao = new Anonimizacao();
 	}
 	
+	
+	
+	@DisplayName("Teste anonimizaMeioDois")
+	@Test
+	void testAnonimizaMeioDois() {
+		
+		assertEquals(this.anonimizacao.anonimizaMeioDois("Mario da Silva"), "Ma**********va");
+		
+	}
+	
+	@DisplayName("Teste anonimizaSegundaLetraSegundaPalavraDiante")
+	@Test
+	void testAnonimizaSegundaLetraSegundaPalavraDiante() {
+		
+		assertEquals(this.anonimizacao.
+				anonimizaSegundaLetraSegundaPalavraDiante("Mario da Silva"), "Mario d* S****");
+		
+	}
+	
+	@DisplayName("Teste anonimizaSegundaLetraDiante")
+	@Test
+	void testAnonimizaSegundaLetraDiante() {
+		
+		assertEquals(this.anonimizacao.anonimizaSegundaLetraDiante("teste"), "t****");
+		
+	}
+	
 	@DisplayName("Teste anonimizaSegundaPalavraDiante")
 	@Test
-	@Disabled("Implementação futura")
 	void testAnonimizaSegundaPalavraDiante() {
 		
 		assertEquals(this.anonimizacao.anonimizaSegundaPalavraDiante("Mario da Silva"), "Mario ** *****");
+		
 	}
 	
 	@DisplayName("Teste anonimizaTudo")
